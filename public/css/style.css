@@ -198,6 +198,18 @@ body {
     align-items: center;
 }
 
+.alert-success {
+    background-color: #f0fdf4;
+    border: 1px solid #86efac;
+    color: #166534;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
 /* ==========================================
    9. FOOTER HALAMAN UTAMA
    ========================================== */
