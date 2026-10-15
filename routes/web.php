@@ -22,3 +22,20 @@ Route::middleware('auth')->group(function () {
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+
+
+
+
+
+
+
+
+
+// --- ROUTE DUMMY / TESTING FRONTEND ---
+
+// Contoh 1: Langsung menampilkan view halaman utama (welcome) tanpa periksa login
+Route::get('/test-welcome', function () {
+    return view('welcome');
+});
