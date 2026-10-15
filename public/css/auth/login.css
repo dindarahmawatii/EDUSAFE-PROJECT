@@ -1,0 +1,110 @@
+/* ==========================================
+   CSS HALAMAN LOGIN (Extra Large & Spacious Card)
+   ========================================== */
+
+body {
+    margin: 0 !important;
+    padding: 30px !important;
+    /* Gradasi horizontal yang kaya dari biru tua ke ice blue terang */
+    background: linear-gradient(115deg, #1d4ed8 0%, #3b82f6 45%, #93c5fd 80%, #cfe2fc 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+.auth-wrapper {
+    width: 100%;
+    width: 800px; /* Lebar wrapper diperbesar secara signifikan */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.auth-main-title {
+    font-size: 56px; /* Judul EduQuiz dibuat lebih besar dan mencolok */
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.auth-container {
+    width: 100%;
+    background: #ffffff;
+    padding: 70px 80px; /* Padding dalam (atas-bawah dan kiri-kanan) diperbesar banget biar kotaknya tinggi & luas */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin-bottom: 26px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 10px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 16px 20px; /* Kotak input diperbesar tingginya */
+    font-size: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    outline: none;
+    background-color: #ffffff;
+    color: #1e293b;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.btn-dark-custom {
+    width: 100%;
+    padding: 16px; /* Tombol Sign In diperbesar */
+    background-color: #222222;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 14px;
+}
+
+.btn-dark-custom:hover {
+    background-color: #000000;
+}
+
+.auth-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    font-size: 14px;
+}
+
+.auth-footer a {
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
