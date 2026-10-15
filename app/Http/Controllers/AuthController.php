@@ -43,7 +43,7 @@ class AuthController extends Controller
             RateLimiter::clear($throttleKey);
             $request->session()->regenerate();
 
-            return redirect()->intended('/dashboard')
+            return redirect()->intended(route('home'))
                 ->with('success', 'Selamat datang kembali, ' . Auth::user()->name . '!');
         }
 
@@ -94,7 +94,7 @@ class AuthController extends Controller
         Auth::login($user);
         $request->session()->regenerate();
 
-        return redirect('/dashboard')
+        return redirect()->route('home')
             ->with('success', 'Akun berhasil dibuat! Selamat datang, ' . $user->name . '!');
     }
 
