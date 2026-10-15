@@ -2,31 +2,65 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Database\Factories\UserFactory;
-use Illuminate\Database\Eloquent\Attributes\Fillable;
-use Illuminate\Database\Eloquent\Attributes\Hidden;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-#[Fillable(['name', 'email', 'password'])]
-#[Hidden(['password', 'remember_token'])]
 class User extends Authenticatable
 {
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
+    protected $table = 'user';
+
+    protected $primaryKey = 'iduser';
+
+    const CREATED_AT = 'created_at';
+
+    const UPDATED_AT = null;
+
+    protected $fillable = [
+        'username',
+        'email',
+        'password',
+        'role',
+        'jumlahGagalLogin',
+        'waktuKunci',
+    ];
+
+    protected $hidden = [
+        'password',
+    ];
+
     protected function casts(): array
     {
         return [
-            'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'waktuKunci' => 'datetime',
+            'jumlahGagalLogin' => 'integer',
         ];
+    }
+
+    public function getNameAttribute(): string
+    {
+        return $this->attributes['username'] ?? '';
+    }
+
+    public function setNameAttribute(string $value): void
+    {
+        $this->attributes['username'] = $value;
+    }
+
+    public function getRememberToken(): ?string
+    {
+        return null;
+    }
+
+    public function setRememberToken($value): void {}
+
+    public function getRememberTokenName(): string
+    {
+        return '';
     }
 }

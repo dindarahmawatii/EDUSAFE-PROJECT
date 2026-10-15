@@ -3,7 +3,7 @@
 @section('title', 'Login - EduQuiz')
 
 @push('page-css')
-    <link rel="stylesheet" href="{{ asset('css/auth/login.css') }}">
+<link rel="stylesheet" href="{{ asset('css/auth/login.css') }}">
 @endpush
 
 @section('content')
@@ -12,9 +12,9 @@
 
     <div class="auth-container">
         @if ($errors->any())
-            <div style="background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: 10px; border-radius: 8px; font-size: 13px; margin-bottom: 15px;">
-                {{ $errors->first('email') }}
-            </div>
+        <div style="background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: 10px; border-radius: 8px; font-size: 13px; margin-bottom: 15px;">
+            {{ $errors->first('email') }}
+        </div>
         @endif
 
         <form action="{{ route('login') }}" method="POST">
